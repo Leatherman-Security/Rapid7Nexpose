@@ -81,7 +81,7 @@ Function Invoke-NexposeQuery {
         [string] $ApiQueryJson = ''
 
         # Force retreving the maximum number of entries (POST comes from Get-NexposeAsset search)
-        If (($RestMethod -eq 'Get') -or ($RestMethod -eq 'Post'  )) { $iRestM.Uri += '?size=100' }
+        If (($RestMethod -eq 'Get') -or ($RestMethod -eq 'Post'  )) { $iRestM.Uri += '?size=500' }
         If (($RestMethod -eq 'Get') -or ($RestMethod -eq 'Delete')) { $getDelete   =  $true      }
 
         If ($ApiQuery -is [hashtable]) {
